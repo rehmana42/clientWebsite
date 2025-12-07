@@ -13,8 +13,8 @@ createRoot(document.getElementById('root')).render(
  <ThemeProvider>
   <ThemeInit/>
   <BrowserRouter>
-  <ToastContainer/>
     <App />
+    <ToastContainer/>
     </BrowserRouter>
     </ThemeProvider>
 

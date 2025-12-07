@@ -48,7 +48,7 @@ const TopBar = () => {
         </NavbarBrand>
 
         <NavbarToggle />
-        <NavbarCollapse className="  h-screen" >
+        <NavbarCollapse className="  h-screen sm:h-auto" >
           {links.map((link) => (
             <NavbarLink
               key={link.name}

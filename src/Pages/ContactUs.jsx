@@ -2,6 +2,8 @@ import { Button, Textarea, TextInput } from "flowbite-react";
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../assets/assets";
 import gsap from "gsap";
+import { toast } from "react-toastify";
+
 
 const ContactUs = () => {
   const formRef = useRef(null);
@@ -49,8 +51,13 @@ const ContactUs = () => {
           body: formData
         });
         const data=await response.json()
-        console.log(data)
+        console.log(data.success)
         setLoading(false)
+        if(data.success){
+            console.log("yes")
+            toast.success("Message send Successfully")
+          
+        }
     
     }
     catch(e){
